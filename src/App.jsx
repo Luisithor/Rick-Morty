@@ -10,6 +10,7 @@ const App = () => {
     setCargando(true);
     const url = `https://rickandmortyapi.com/api/character/?page=${pagina}&name=${busqueda}`;
     fetch(url)
+
       .then((response) => response.json())
       .then((data) => {
         setPersonajes(data.results || []);
@@ -189,7 +190,7 @@ const styles = {
     gap: "24px",
   },
   tarjeta: {
-    background: "white",
+    background: "beige",
     borderRadius: "16px",
     boxShadow: "0 4px 20px rgba(0,0,0,0.08)",
     overflow: "hidden",
@@ -278,7 +279,6 @@ const styles = {
   },
 };
 
-// Agregar la animación del spinner
 const styleSheet = document.styleSheets[0];
 styleSheet.insertRule(`
   @keyframes spin {
